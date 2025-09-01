@@ -1,3 +1,11 @@
+/* src/index.css */
+/* Adicione este reset CSS universal */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -23,11 +31,16 @@ a:hover {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
+  margin: 0; 
   min-width: 320px;
   min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh; /* Garante que o root ocupe a altura total da viewport */
+  width: 100%; /* Garante que o root ocupe a largura total */
+  display: flex; /* Permite que os filhos (Navbar, Routes, Footer) se organizem em coluna */
+  flex-direction: column; /* Organiza os filhos verticalmente */
 }
 
 h1 {
