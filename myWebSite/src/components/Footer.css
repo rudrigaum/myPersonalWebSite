@@ -3,7 +3,7 @@
   color: #aaa;
   padding: 1rem 2rem;
   text-align: center;
-  margin-top: auto; 
+  margin-top: auto;
 }
 
 .footer-content {
@@ -20,13 +20,17 @@
 
 .social-links {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.5rem; 
+  align-items: center; 
 }
 
 .social-links a {
   color: #aaa;
-  text-decoration: none;
+  text-decoration: none; 
   transition: color 0.3s ease;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
 
 .social-links a:hover {
