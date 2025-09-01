@@ -7,8 +7,8 @@ import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
-import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,18 +16,14 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* Defina suas rotas aqui */}
         <Route path="/" element={<Home />} />
         <Route path="/sobre" element={<About />} />
         <Route path="/projetos" element={<Projects />} />
-        <Route path="/contato" element={<Contact />} />
 
         {/* Rota para página não encontrada (opcional) */}
         <Route path="*" element={<div>Página não encontrada</div>} />
       </Routes>
-
-      {/* O Footer (rodapé) pode vir aqui */}
-      {/* Você pode criar um componente Footer em src/components/Footer.jsx */}
+      <Footer />
     </Router>
   );
 }
