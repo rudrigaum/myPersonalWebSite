@@ -1,17 +1,57 @@
-// src/pages/About.jsx
 import React from 'react';
+import './About.css';
 
 function About() {
+  const skills = [
+    'Swift',
+    'Kotlin',
+    'Java',
+    'Dart',
+    'Flutter',
+    'UIKit',
+    'SwiftUI',
+    'Foundation',
+    'Core Data',
+    'Combine',
+    'Git',
+    'GitHub',
+    'Xcode',
+    'TestFlight',
+    'Swift Package Manager (SPM)',
+    'Cocoapods',
+    'Carthage',
+    'Fastlane',
+    'Figma',
+    'APIs RESTful',
+    
+  ];
   return (
-    <div>
-      <h1>About Me</h1>
-      <p>I am an iOS Developer with a strong background in native mobile development, specializing in Swift, UIKit, and SwiftUI. I'm passionate about creating efficient and scalable applications from concept to implementation, focusing on API integration, unit testing, and implementing best practices in accessibility and analytics. I am driven by a passion for continuous learning and collaboration to create innovative solutions.
+    <div className="about-container">
+      <section className="profile-section">
+        <img 
+          src="https://media.licdn.com/dms/image/v2/C4E03AQFk38Yg-gV8BA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1609585275254?e=1759968000&v=beta&t=RsEDEaL6BMp-aaZF-LMw-7IuoSjsJczlg7SaYdDRuqo" 
+          alt="Sua foto de perfil" 
+          className="profile-photo" 
+        />
+        <h1 className="about-heading">About Me</h1>
+        <p className="about-bio">
+          As an iOS Developer, I am dedicated to building efficient, scalable native applications with an excellent user experience. 
+          My expertise lies in Swift, UIKit, and SwiftUI, and I have a solid understanding of architectural patterns like MVC, MVVM, and VIPER.
+          My day-to-day work spans from designing new features and integrating RESTful APIs to ensuring code quality with unit tests and managing dependencies. 
+          While my primary focus is on the Apple ecosystem, my experience also extends to Android development, and I'm keenly interested in exploring cross-platform technologies like Flutter, as well as Backend and AI solutions.
+        </p>
+      </section>
 
-My journey in technology began with a degree in Information Systems and was further specialized with a postgraduate degree in Mobile Development. This period gave me a broad understanding of IT infrastructure and process automation, which shaped my foundation as a developer.
-
-I then transitioned to mobile development, starting as an Android developer at Itaú Unibanco. After eight months, I made a decisive shift to iOS. At Itaú, I contributed to the development and maintenance of applications used by millions of customers, always prioritizing performance, security, and accessibility. I have extensive experience with Swift, UIKit, and SwiftUI, applying architectures like MVVM and MVC. My work involved implementing new features, performing unit tests, integrating APIs, and optimizing critical flows to ensure scalability and code quality.
-
-My experience demonstrates a strong ability to adapt and a solid commitment to delivering high-quality, impactful software solutions. I am always looking for new challenges and opportunities to grow professionally.</p>
+      <section className="skills-section">
+        <h2 className="skills-heading">Technical Skills</h2>
+        <div className="skills-grid">
+          {skills.map((skill, index) => (
+            <div key={index} className="skill-item">
+              <span className="skill-name">{skill}</span>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
